@@ -1,0 +1,536 @@
+<!DOCTYPE html><html lang="fr-CA">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OnCampe | Louez une roulotte directement sur un terrain de camping</title>
+  <meta name="description" content="OnCampe facilite la location de roulottes déjà installées sur des terrains de camping au Québec. Simple, sécuritaire et pratique pour les campeurs, propriétaires et campings." />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }body {
+  color: #1f2933;
+  background: #f8faf7;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  width: 92%;
+  max-width: 1180px;
+  margin: auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 800;
+  color: #1f7a3f;
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: #111827;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #1f7a3f;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #166534;
+}
+
+.btn-outline {
+  border: 2px solid #1f7a3f;
+  color: #1f7a3f;
+  background: white;
+}
+
+.btn-outline:hover {
+  background: #ecfdf3;
+}
+
+.hero {
+  padding: 90px 0;
+  background: linear-gradient(135deg, #ecfdf3, #ffffff);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.badge {
+  display: inline-block;
+  background: #d1fae5;
+  color: #065f46;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 52px;
+  line-height: 1.08;
+  margin-bottom: 22px;
+  color: #111827;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #4b5563;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero-card {
+  background: white;
+  border-radius: 28px;
+  padding: 30px;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.fake-image {
+  height: 260px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #2f855a, #93c572);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 44px;
+  font-weight: 800;
+  margin-bottom: 22px;
+  text-align: center;
+  padding: 20px;
+}
+
+.card-line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+section {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 50px;
+}
+
+.section-title h2 {
+  font-size: 38px;
+  color: #111827;
+  margin-bottom: 14px;
+}
+
+.section-title p {
+  color: #6b7280;
+  font-size: 18px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background: white;
+  padding: 28px;
+  border-radius: 24px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+}
+
+.card h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #111827;
+}
+
+.icon {
+  font-size: 34px;
+  margin-bottom: 14px;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.list {
+  display: grid;
+  gap: 16px;
+}
+
+.list-item {
+  background: white;
+  border: 1px solid #e5e7eb;
+  padding: 18px;
+  border-radius: 18px;
+  font-weight: 600;
+}
+
+.highlight {
+  background: #111827;
+  color: white;
+  border-radius: 32px;
+  padding: 60px;
+}
+
+.highlight h2 {
+  font-size: 36px;
+  margin-bottom: 14px;
+}
+
+.highlight p {
+  color: #d1d5db;
+  margin-bottom: 24px;
+  font-size: 18px;
+}
+
+.faq {
+  max-width: 850px;
+  margin: auto;
+  display: grid;
+  gap: 16px;
+}
+
+.faq-item {
+  background: white;
+  border-radius: 18px;
+  padding: 22px;
+  border: 1px solid #e5e7eb;
+}
+
+.faq-item h3 {
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.contact-box {
+  background: white;
+  border-radius: 30px;
+  padding: 40px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+}
+
+form {
+  display: grid;
+  gap: 16px;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 15px;
+  border-radius: 14px;
+  border: 1px solid #d1d5db;
+  font-size: 16px;
+}
+
+textarea {
+  min-height: 130px;
+}
+
+footer {
+  background: #111827;
+  color: white;
+  padding: 40px 0;
+}
+
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-small {
+  color: #9ca3af;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+  .hero-grid,
+  .split,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .highlight {
+    padding: 36px;
+  }
+}
+
+  </style>
+</head>
+<body>  <header>
+    <div class="container nav">
+      <div class="logo">On<span>Campe</span></div>
+      <nav class="nav-links">
+        <a href="#fonctionnement">Fonctionnement</a>
+        <a href="#proprietaires">Propriétaires</a>
+        <a href="#campings">Campings</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="#contact" class="btn btn-primary">Devenir partenaire</a>
+    </div>
+  </header>  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="badge">Nouvelle façon de camper au Québec</div>
+        <h1>Louez une roulotte déjà installée sur un terrain de camping.</h1>
+        <p>OnCampe connecte les campeurs, les propriétaires de roulottes et les campings pour offrir des séjours simples, pratiques et sécuritaires.</p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">Je veux louer</a>
+          <a href="#proprietaires" class="btn btn-outline">J’ai une roulotte à louer</a>
+        </div>
+      </div><div class="hero-card">
+    <div class="fake-image">OnCampe</div>
+    <div class="card-line"><strong>Roulotte familiale</strong><span>À partir de 149$/nuit</span></div>
+    <div class="card-line"><span>Terrain 3 services</span><span>Disponible</span></div>
+    <div class="card-line"><span>Camping partenaire</span><span>Québec</span></div>
+  </div>
+</div>
+
+  </section>  <section id="fonctionnement">
+    <div class="container">
+      <div class="section-title">
+        <h2>Comment ça fonctionne ?</h2>
+        <p>OnCampe simplifie la location de roulottes déjà placées dans des campings partenaires.</p>
+      </div><div class="grid-3">
+    <div class="card">
+      <div class="icon">🔎</div>
+      <h3>1. Trouvez une roulotte</h3>
+      <p>Le client choisit une roulotte selon la région, les dates, le prix et les services disponibles.</p>
+    </div>
+    <div class="card">
+      <div class="icon">📅</div>
+      <h3>2. Réservez en ligne</h3>
+      <p>La réservation se fait simplement avec paiement sécurisé et confirmation rapide.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🏕️</div>
+      <h3>3. Profitez du séjour</h3>
+      <p>La roulotte est déjà installée sur le terrain. Le client arrive et profite du camping.</p>
+    </div>
+  </div>
+</div>
+
+  </section>  <section id="proprietaires" style="background:#ffffff;">
+    <div class="container split">
+      <div>
+        <div class="section-title" style="text-align:left; margin:0 0 30px;">
+          <h2>Pour les propriétaires de roulottes</h2>
+          <p>Votre roulotte reste souvent inutilisée ? OnCampe vous aide à générer des revenus avec une solution simple et encadrée.</p>
+        </div>
+        <div class="list">
+          <div class="list-item">✅ Créez votre annonce avec photos et description</div>
+          <div class="list-item">✅ Définissez vos prix et disponibilités</div>
+          <div class="list-item">✅ Recevez des réservations</div>
+          <div class="list-item">✅ Suivez vos revenus dans votre tableau de bord</div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Pourquoi louer avec OnCampe ?</h3>
+        <p>Notre objectif est de rendre la location plus simple, plus professionnelle et plus sécuritaire pour les propriétaires de roulottes.</p>
+        <br />
+        <p><strong>Vous gardez le contrôle :</strong> vous choisissez vos dates, votre prix et les conditions de location.</p>
+        <br />
+        <a href="#contact" class="btn btn-primary">Inscrire ma roulotte</a>
+      </div>
+    </div>
+  </section>  <section id="campings">
+    <div class="container split">
+      <div class="card">
+        <h3>Tableau de bord camping</h3>
+        <p>Les campings partenaires peuvent suivre les roulottes disponibles, les réservations, les revenus et les périodes occupées.</p>
+        <br />
+        <p>Une façon moderne d’ajouter une nouvelle source de revenus sans devoir acheter de roulottes.</p>
+      </div>
+      <div>
+        <div class="section-title" style="text-align:left; margin:0 0 30px;">
+          <h2>Pour les propriétaires de campings</h2>
+          <p>OnCampe aide les campings à offrir plus d’hébergement, attirer de nouveaux clients et mieux rentabiliser certains terrains.</p>
+        </div>
+        <div class="list">
+          <div class="list-item">✅ Plus de réservations potentielles</div>
+          <div class="list-item">✅ Revenus supplémentaires</div>
+          <div class="list-item">✅ Suivi des roulottes sur le terrain</div>
+          <div class="list-item">✅ Gestion plus professionnelle</div>
+        </div>
+      </div>
+    </div>
+  </section>  <section>
+    <div class="container">
+      <div class="highlight">
+        <h2>Une plateforme pensée pour le camping moderne.</h2>
+        <p>OnCampe veut devenir la référence au Québec pour louer une roulotte directement sur un terrain de camping, avec une expérience simple pour tout le monde.</p>
+        <a href="#contact" class="btn btn-primary">Parler avec OnCampe</a>
+      </div>
+    </div>
+  </section>  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>Pourquoi choisir OnCampe ?</h2>
+        <p>Une solution avantageuse pour les campeurs, les propriétaires et les campings.</p>
+      </div><div class="grid-3">
+    <div class="card">
+      <div class="icon">🛡️</div>
+      <h3>Sécuritaire</h3>
+      <p>Un processus clair, des règles de location et une approche professionnelle pour protéger les partenaires.</p>
+    </div>
+    <div class="card">
+      <div class="icon">💰</div>
+      <h3>Rentable</h3>
+      <p>Les propriétaires et les campings peuvent générer des revenus additionnels avec des roulottes déjà disponibles.</p>
+    </div>
+    <div class="card">
+      <div class="icon">⚡</div>
+      <h3>Simple</h3>
+      <p>Réservation en ligne, calendrier clair et tableau de bord pour mieux suivre les locations.</p>
+    </div>
+  </div>
+</div>
+
+  </section>  <section id="faq" style="background:#ffffff;">
+    <div class="container">
+      <div class="section-title">
+        <h2>Questions fréquentes</h2>
+        <p>Quelques réponses simples pour mieux comprendre OnCampe.</p>
+      </div><div class="faq">
+    <div class="faq-item">
+      <h3>Est-ce que les roulottes sont déplacées ?</h3>
+      <p>Non. Le concept est de louer des roulottes déjà installées sur des terrains de camping partenaires.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Qui fixe le prix de location ?</h3>
+      <p>Le propriétaire de la roulotte peut fixer son prix, avec l’aide d’OnCampe pour rester compétitif selon la saison et le marché.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Est-ce que les campings doivent acheter des roulottes ?</h3>
+      <p>Non. OnCampe permet aux campings de collaborer avec des propriétaires de roulottes déjà présents ou intéressés.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Est-ce que la plateforme est déjà disponible ?</h3>
+      <p>OnCampe est en préparation. Vous pouvez nous contacter pour devenir parmi les premiers partenaires.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Est-ce qu’il y aura une protection ou assurance ?</h3>
+      <p>L’objectif est d’encadrer les locations avec des règles claires et une protection adaptée. Les détails peuvent varier selon les partenaires et les assureurs.</p>
+    </div>
+  </div>
+</div>
+
+  </section>  <section id="contact">
+    <div class="container split">
+      <div>
+        <div class="section-title" style="text-align:left; margin:0 0 30px;">
+          <h2>Vous voulez faire partie du projet ?</h2>
+          <p>Que vous soyez campeur, propriétaire de roulotte ou propriétaire de camping, contactez-nous pour en savoir plus.</p>
+        </div>
+        <p><strong>Email :</strong> info@oncampe.ca</p>
+        <p><strong>Région de départ :</strong> Québec</p>
+        <p><strong>Objectif :</strong> rendre la location de roulottes plus simple, plus accessible et plus sécuritaire.</p>
+      </div><div class="contact-box">
+    <form>
+      <input type="text" placeholder="Votre nom" />
+      <input type="email" placeholder="Votre email" />
+      <select>
+        <option>Je suis...</option>
+        <option>Un campeur</option>
+        <option>Un propriétaire de roulotte</option>
+        <option>Un propriétaire de camping</option>
+        <option>Autre</option>
+      </select>
+      <textarea placeholder="Votre message"></textarea>
+      <button type="button" class="btn btn-primary" style="border:none;">Envoyer ma demande</button>
+    </form>
+  </div>
+</div>
+
+  </section>  <footer>
+    <div class="container footer-grid">
+      <div>
+        <div class="logo" style="color:white;">On<span style="color:#86efac;">Campe</span></div>
+        <p class="footer-small">Location de roulottes sur terrains de camping au Québec.</p>
+      </div>
+      <div>
+        <p><strong>Liens utiles</strong></p>
+        <p class="footer-small">Conditions d’utilisation</p>
+        <p class="footer-small">Politique de confidentialité</p>
+        <p class="footer-small">Contact</p>
+      </div>
+      <div>
+        <p><strong>Contact</strong></p>
+        <p class="footer-small">info@oncampe.ca</p>
+      </div>
+    </div>
+  </footer></body>
+</html>
