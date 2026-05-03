@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OnCampe - Location de roulotte</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+header {
+    position: absolute;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    z-index: 10;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #a6ce39;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: url('TON_IMAGE.jpg') center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    color: white;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+    position: relative;
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 50px;
+}
+
+.hero span {
+    color: #a6ce39;
+}
+
+.btn {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 15px 25px;
+    background: #a6ce39;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* SECTION LISTING */
+.section {
+    padding: 50px;
+    background: #f5f5f5;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card h3 {
+    padding: 10px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>OnCampe</h2>
+    <nav>
+        <a href="#">Accueil</a>
+        <a href="#">Roulottes</a>
+        <a href="#">Propriétaires</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+        <h1>
+            Location de <span>roulotte</span><br>
+            sur terrain de camping<br>
+            au Québec
+        </h1>
+
+        <p>Réservez. Arrivez. Profitez.</p>
+
+        <a href="#" class="btn">Voir les roulottes</a>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Des roulottes prêtes à vous accueillir</h2>
+
+    <div class="cards">
+        <div class="card">
+            <img src="image1.jpg">
+            <h3>Roulotte familiale</h3>
+        </div>
+
+        <div class="card">
+            <img src="image2.jpg">
+            <h3>Roulotte moderne</h3>
+        </div>
+
+        <div class="card">
+            <img src="image3.jpg">
+            <h3>Confort tout inclus</h3>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
